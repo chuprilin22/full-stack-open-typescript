@@ -2,7 +2,7 @@ name: Patientor API Tests
 
 on:
   push:
-    branches: [ xmain, xmaster ]
+    branches: [ main, master ]
 
 jobs:
   test:
@@ -35,10 +35,6 @@ jobs:
     - name: Install test dependencies
       working-directory: ./patientor-api-tests
       run: npm install
-
-    - name: Install Playwright browsers
-      working-directory: ./patientor-api-tests
-      run: npx playwright install --with-deps chromium
 
     - name: Run API tests
       working-directory: ./patientor-api-tests
